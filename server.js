@@ -1,4 +1,5 @@
 import express from 'express'
+const port =3330
 const app = express() 
 app.get('/', (req, res) => res.send('Hello you!!!!!')) 
-app.listen(3333, () => console.log('Server ready at port 3333'))
+app.listen(port, () => console.log(`Server listening on port http://127.0.0.1:${port}/`))
