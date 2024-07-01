@@ -1,24 +1,17 @@
 [
     {
-        "_id": "GksGq",
-        "title": "check",
-        "description": "check",
-        "severity": 5,
-        "createdAt": 1719837242743
-    },
-    {
-        "_id": "abc1",
-        "title": "Cannot save a new car",
-        "description": "problem when clicking Save",
-        "severity": 3,
-        "createdAt": 154107359454
+        "_id": "oH9Y7",
+        "title": "gbvdffb",
+        "description": "undefined",
+        "severity": null,
+        "createdAt": 1719841297557
     },
     {
         "_id": "abc2",
         "title": "Infinite Loop Detected",
         "description": "looping",
-        "severity": 3,
-        "createdAt": 154210735945
+        "severity": 2,
+        "createdAt": 1719840689308
     },
     {
         "_id": "abc3",

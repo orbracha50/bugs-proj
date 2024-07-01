@@ -1,7 +1,11 @@
 import express from 'express'
 import { bugService } from './services/bug.service.js'
-
+import { loggerService } from './services/logger.service.js'
 const app = express()
+
+
+app.use(express.static('public'))
+
 
 app.get('/api/bug', (req, res) => {
     bugService.query().then(bugs => res.send(bugs))
@@ -27,7 +31,7 @@ app.get('/api/bug/:bugId', (req, res) => {
     bugService.getById(bugId)
         .then(bug => res.send(bug))
         .catch((err) => {
-            /* loggerService.error('Cannot get bug', err) */
+            loggerService.error('Cannot get bug', err)
             res.status(500).send('Cannot get bug')
         })
 })
@@ -39,7 +43,7 @@ app.get('/api/bug/:bugId/remove', (req, res) => {
         .then(() => res.redirect('/api/bug'))
         /* .then(() => res.send(`bug (${bugId}) removed!`)) */
         .catch((err) => {
-            /* loggerService.error('Cannot remove bug', err) */
+            loggerService.error('Cannot remove bug', err)
             res.status(500).send('Cannot remove bug', err)
         })
 
@@ -54,5 +58,4 @@ app.get('/api/bug/:bugId/remove', (req, res) => {
 
 
 const port = 3330
-app.get('/', (req, res) => res.send('Hello you!!!!!'))
-app.listen(port, () => console.log(`Server listening on port http://127.0.0.1:${port}/`))
+app.listen(port, () => loggerService.info((`Server listening on port http://127.0.0.1:${port}/`)))
