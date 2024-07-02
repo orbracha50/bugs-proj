@@ -10,11 +10,12 @@ export const bugService = {
     getById,
     save,
     remove,
+    getDefaultFilter
 }
 
 
 function query(filterBy = {}) {
-    return axios.get(BASE_URL)
+    return axios.get(BASE_URL, { params: filterBy })
         .then(res => res.data)
 }
 function getById(bugId) {
@@ -22,15 +23,25 @@ function getById(bugId) {
 }
 
 function remove(bugId) {
-    return axios.get(BASE_URL + bugId + '/remove')
+    return axios.delete(BASE_URL + bugId)
+        .then(res => res.data)
 }
 
 function save(bug) {
-    const url = BASE_URL + 'save'
+    if (bug._id) {
+        return axios.put(BASE_URL, bug)
+    } else {
+        console.log(bug)
+        return axios.post(BASE_URL, bug)
+    }
+    /* const url = BASE_URL + 'save'
     let queryParams = `?title=${bug.title}&description=${bug.description}&severity=${bug.severity} `
     if (bug._id) {
         queryParams += `&_id=${bug._id}`
-    } 
-    return axios.get(url + queryParams).then(res => res.data)
+    }
+    return axios.get(url + queryParams).then(res => res.data) */
+}
+function getDefaultFilter() {
+    return { title: '', minSev: '', pageIdx: 0 }
 }
 
