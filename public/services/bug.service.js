@@ -42,6 +42,6 @@ function save(bug) {
     return axios.get(url + queryParams).then(res => res.data) */
 }
 function getDefaultFilter() {
-    return { title: '', minSev: '', pageIdx: 0 }
+    return { title: '', minSev: ''}
 }
 

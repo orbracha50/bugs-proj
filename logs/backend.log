@@ -84,3 +84,68 @@
 2.7.2024, 13:16:12 - INFO - Server listening on port http://127.0.0.1:3330/
 2.7.2024, 13:16:14 - INFO - Server listening on port http://127.0.0.1:3330/
 2.7.2024, 13:33:48 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:43:04 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:43:26 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:44:33 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:44:49 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:45:46 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:46:25 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:46:33 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:48:39 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:48:42 - ERROR - Cannot get cars | ReferenceError: cars is not defined
+2.7.2024, 14:48:43 - ERROR - Cannot get cars | ReferenceError: cars is not defined
+2.7.2024, 14:48:53 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:49:40 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:49:42 - ERROR - Cannot get cars | ReferenceError: cars is not defined
+2.7.2024, 14:49:43 - ERROR - Cannot get cars | ReferenceError: cars is not defined
+2.7.2024, 14:50:40 - ERROR - Cannot get cars | ReferenceError: cars is not defined
+2.7.2024, 14:50:41 - ERROR - Cannot get cars | ReferenceError: cars is not defined
+2.7.2024, 14:52:01 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:52:29 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:52:41 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 14:57:41 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:22:49 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:22:49 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:22:50 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:28 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:37 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:37 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:38 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:39 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:39 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:39 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:39 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:39 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:39 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:40 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:40 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:58 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:59 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:23:59 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:24:05 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:24:06 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:24:06 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:24:14 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:25:30 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:25:56 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:27:03 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:30:09 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:30:50 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:32:43 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:34:09 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:40:18 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:41:56 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:41:56 - INFO - Server listening on port http://127.0.0.1:3330/
+2.7.2024, 15:42:04 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:43:47 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:44:10 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:44:14 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:44:36 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:44:38 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:44:52 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:47:53 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:48:05 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:48:07 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:48:42 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:48:43 - INFO - Server listening on port http://127.0.0.1:3333/
+2.7.2024, 15:49:11 - INFO - Server listening on port http://127.0.0.1:3333/

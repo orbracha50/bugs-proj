@@ -38,7 +38,7 @@ export function BugIndex() {
             severity: +prompt('Bug severity?'),
             description: prompt('Bag description')
         }
-       
+
         bugService.save(bug)
             .then((savedBug) => {
                 console.log('Added Bug', savedBug)
@@ -71,8 +71,40 @@ export function BugIndex() {
                 showErrorMsg('Cannot update bug')
             })
     }
+
     function onSetFilter(filterBy) {
-        setFilterBy(prevFilter => ({ ...prevFilter, ...filterBy }))
+        setFilterBy(prevFilter => {
+            let nextPageIdx
+            if (prevFilter.pageIdx !== undefined) nextPageIdx = 0
+            return { ...prevFilter, ...filterBy, pageIdx: nextPageIdx }
+        })
+    }
+
+    function togglePagination() {
+        setFilterBy(prevFilter => {
+            return { ...prevFilter, pageIdx: prevFilter.pageIdx === undefined ? 0 : undefined }
+        })
+    }
+
+    function onChangePage(diff) {
+        if (filterBy.pageIdx === undefined) return
+        // console.log('diff:', diff)
+        setFilterBy(prevFilter => {
+            let nextPageIdx = prevFilter.pageIdx + diff
+            if (nextPageIdx < 0) nextPageIdx = Math.round((bugs.length - 1) / 3)
+            if (nextPageIdx > ((bugs.length - 1) / 3)) nextPageIdx = Math.round((bugs.length - 1) / 3)
+            return { ...prevFilter, pageIdx: nextPageIdx }
+        })
+    }
+    function onChangeSorting({target}){
+        setFilterBy(prevFilter => {
+            return { ...prevFilter, sortBy: target.value }
+        })
+    }
+    function onChangeDir(){
+        setFilterBy(prevFilter => {
+            return { ...prevFilter, dir: prevFilter.dir === 'up' ? 'down' : 'up' }
+        })
     }
 
     return (
@@ -82,9 +114,24 @@ export function BugIndex() {
                 <BugFilter filterBy={filterBy} onSetFilter={onSetFilter} />
                 <button onClick={onAddBug}>Add Bug ⛐</button>
             </section>
+            <section>
+                <button onClick={togglePagination} >Toggle Pagination</button>
+                <button onClick={() => onChangePage(-1)}>-</button>
+                {filterBy.pageIdx + 1 || 'No Pagination'}
+                <button onClick={() => onChangePage(1)}>+</button>
+                <select onChange={(target) =>onChangeSorting(target)} id="cars" name="cars">
+                    <option value="Text">Text</option>
+                    <option value="Severity">Severity</option>
+                    <option value="CreatedAt">Created-at</option>
+                </select>
+                <label htmlFor="">direction:</label>
+                <input onClick={onChangeDir} type="checkBox" />
+
+            </section>
             <main>
                 <BugList bugs={bugs} onRemoveBug={onRemoveBug} onEditBug={onEditBug} />
             </main>
         </main>
     )
 }
+

@@ -13,7 +13,10 @@ app.use(express.json())
 app.get('/api/bug', (req, res) => {
     const filterBy = {
         title: req.query.title,
-        minSev: +req.query.minSev
+        minSev: +req.query.minSev,
+        pageIdx: req.query.pageIdx,
+        sortBy: req.query.sortBy,
+        dir: req.query.dir
     }
     bugService.query(filterBy)
         .then(bugs => res.send(bugs))
@@ -91,5 +94,5 @@ app.delete('/api/bug/:bugId', (req, res) => {
 })
 
 
-const port = 3330
+const port = 3333
 app.listen(port, () => loggerService.info((`Server listening on port http://127.0.0.1:${port}/`)))
