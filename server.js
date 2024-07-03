@@ -1,4 +1,5 @@
 import express from 'express'
+import path from 'path'
 import cookieParser from 'cookie-parser'
 import { bugService } from './services/bug.service.js'
 import { loggerService } from './services/logger.service.js'
@@ -169,8 +170,9 @@ app.post('/api/auth/logout', (req, res) => {
     res.send('logged-out!')
 })
 
-/* app.get('/**', (req, res) => {
+app.get('/**', (req, res) => {
     res.sendFile(path.resolve('public/index.html'))
-}) */
+})
+
 const port = process.env.PORT || 3330
 app.listen(port, () => loggerService.info((`Server listening on port http://127.0.0.1:${port}/`)))

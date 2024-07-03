@@ -8,6 +8,11 @@ export const userService = {
     getLoggedinUser,
     getById,
     getEmptyCredentials,
+    query
+}
+function query() {
+    return axios.get(BASE_URL)
+        .then(res => res.data)
 }
 
 function getById(userId) {

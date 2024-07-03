@@ -56,6 +56,7 @@ function getById(userId) {
 		_id: user._id,
 		username: user.username,
 		fullname: user.fullname,
+		isAdmin: user.isAdmin
 	}
 
 	return Promise.resolve(user)

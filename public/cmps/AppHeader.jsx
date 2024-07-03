@@ -3,7 +3,7 @@ const { useState } = React
 const { Link, NavLink } = ReactRouterDOM
 const { useNavigate } = ReactRouter
 
-import { userService } from '../services/user.service.js' 
+import { userService } from '../services/user.service.js'
 import { showErrorMsg } from '../services/event-bus.service.js'
 
 import { UserMsg } from './UserMsg.jsx'
