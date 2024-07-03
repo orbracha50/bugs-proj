@@ -67,6 +67,7 @@
     "username": "orbracha",
     "password": "12345",
     "fullname": "or bracha",
-    "_id": "WMT1L"
+    "_id": "WMT1L",
+    "isAdmin": true
   }
 ]

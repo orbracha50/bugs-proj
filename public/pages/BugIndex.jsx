@@ -2,7 +2,6 @@ import { bugService } from '../services/bug.service.js'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { BugList } from '../cmps/BugList.jsx'
 import { BugFilter } from '../cmps/BugFilter.jsx'
-
 const { useState, useEffect } = React
 
 export function BugIndex() {
@@ -36,9 +35,8 @@ export function BugIndex() {
         const bug = {
             title: prompt('Bug title?'),
             severity: +prompt('Bug severity?'),
-            description: prompt('Bag description')
+            description: prompt('Bag description'),
         }
-
         bugService.save(bug)
             .then((savedBug) => {
                 console.log('Added Bug', savedBug)
@@ -96,12 +94,12 @@ export function BugIndex() {
             return { ...prevFilter, pageIdx: nextPageIdx }
         })
     }
-    function onChangeSorting({target}){
+    function onChangeSorting({ target }) {
         setFilterBy(prevFilter => {
             return { ...prevFilter, sortBy: target.value }
         })
     }
-    function onChangeDir(){
+    function onChangeDir() {
         setFilterBy(prevFilter => {
             return { ...prevFilter, dir: prevFilter.dir === 'up' ? 'down' : 'up' }
         })
@@ -119,7 +117,7 @@ export function BugIndex() {
                 <button onClick={() => onChangePage(-1)}>-</button>
                 {filterBy.pageIdx + 1 || 'No Pagination'}
                 <button onClick={() => onChangePage(1)}>+</button>
-                <select onChange={(target) =>onChangeSorting(target)} id="cars" name="cars">
+                <select onChange={(target) => onChangeSorting(target)} id="cars" name="cars">
                     <option value="Text">Text</option>
                     <option value="Severity">Severity</option>
                     <option value="CreatedAt">Created-at</option>

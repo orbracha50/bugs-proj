@@ -19,6 +19,7 @@ export function LoginSignup({ onSetUser }) {
     }
 
     function login(credentials) {
+        console.log(credentials)
         userService.login(credentials)
             .then(onSetUser)
             .then(() => { showSuccessMsg('Logged in successfully') })
@@ -26,12 +27,13 @@ export function LoginSignup({ onSetUser }) {
     }
 
     function signup(credentials) {
+        console.log(credentials)
         userService.signup(credentials)
             .then(onSetUser)
             .then(() => { showSuccessMsg('Signed in successfully') })
             .catch((err) => { showErrorMsg('Oops try again') })
     }
-
+    
     return (
         <div className="login-page">
             <form className="login-form" onSubmit={handleSubmit}>

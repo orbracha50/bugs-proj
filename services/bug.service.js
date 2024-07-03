@@ -53,24 +53,37 @@ function getById(bugId) {
     return Promise.resolve(bug)
 }
 
-function remove(bugId) {
-    console.log(bugs)
+function remove(bugId, loggedinUser) {
     const bugIdx = bugs.findIndex(bug => bug._id === bugId)
-    if (bugIdx < 0) return Promise.reject('Cannot find bug - ' + bugId)
+    if (bugIdx === -1) return Promise.reject('No Such bug')
+
+
+    const bug = bugs[bugIdx]
+    if (!loggedinUser.isAdmin &&
+        bug.creator._id !== loggedinUser._id) {
+        return Promise.reject('Not your bug!!')
+    }
+
     bugs.splice(bugIdx, 1)
     return _saveBugsToFile().then(() => `car (${bugId}) removed!`)
 }
 
-function save(bugToSave) {
-    if (bugToSave._id) {
-        const bugIdx = bugs.findIndex(bug => bug._id === bugToSave._id)
-        bugs[bugIdx] = bugToSave
+function save(bug, loggedinUser) {
+    console.log(loggedinUser)
+    if (bug._id) {
+        const bugToUpdate = bugs.find(currBug => currBug._id === bug._id)
+        if (!loggedinUser.isAdmin &&
+            bugToUpdate.creator._id !== loggedinUser._id) {
+            return Promise.reject('Not your bug!')
+        }
     } else {
-        bugToSave._id = utilService.makeId()
-        bugs.unshift(bugToSave)
+        bug._id = utilService.makeId()
+        bug['creator'] = loggedinUser
+        console.log
+        bugs.unshift(bug)
     }
 
-    return _saveBugsToFile().then(() => bugToSave)
+    return _saveBugsToFile().then(() => bug)
 }
 function _saveBugsToFile() {
     return new Promise((resolve, reject) => {

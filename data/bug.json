@@ -1,36 +1,12 @@
 [
     {
-        "_id": "mr0H8",
-        "title": "ffff",
-        "description": "fffff",
-        "severity": 4,
-        "createdAt": 1719916206731,
-        "labels": "['critical', 'need-CR', 'dev-branch']",
-        "creator": {
-            "_id": "u101",
-            "fullname": "Puki Ja"
-        }
-    },
-    {
-        "_id": "1xqBo",
-        "title": "scscscs",
-        "description": "ssss",
-        "severity": 1,
-        "createdAt": 1719915941405,
-        "labels": "['critical', 'dev-branch']",
-        "creator": {
-            "_id": "u102",
-            "fullname": "Muki Ba"
-        }
-    },
-    {
         "title": "dddd",
         "severity": 4,
         "createdAt": 1719915384173,
         "_id": "kro6l",
         "labels": "['dev-branch']",
         "creator": {
-            "_id": "u101",
+            "_id": "kro6l",
             "fullname": "Puki Ja"
         }
     },
@@ -42,7 +18,7 @@
         "createdAt": 15421073594,
         "labels": "['need-CR']",
         "creator": {
-            "_id": "u101",
+            "_id": "abc3",
             "fullname": "Puki Ja"
         }
     },
@@ -54,7 +30,7 @@
         "createdAt": 1542107359,
         "labels": "['critical', 'need-CR',]",
         "creator": {
-            "_id": "u102",
+            "_id": "abc4",
             "fullname": "Muki Ba"
         }
     }
