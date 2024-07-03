@@ -5,7 +5,11 @@
         "description": "fffff",
         "severity": 4,
         "createdAt": 1719916206731,
-        "labels" : "['critical', 'need-CR', 'dev-branch']"
+        "labels": "['critical', 'need-CR', 'dev-branch']",
+        "creator": {
+            "_id": "u101",
+            "fullname": "Puki Ja"
+        }
     },
     {
         "_id": "1xqBo",
@@ -13,14 +17,22 @@
         "description": "ssss",
         "severity": 1,
         "createdAt": 1719915941405,
-        "labels" : "['critical', 'dev-branch']"
+        "labels": "['critical', 'dev-branch']",
+        "creator": {
+            "_id": "u102",
+            "fullname": "Muki Ba"
+        }
     },
     {
         "title": "dddd",
         "severity": 4,
         "createdAt": 1719915384173,
         "_id": "kro6l",
-        "labels" : "['dev-branch']"
+        "labels": "['dev-branch']",
+        "creator": {
+            "_id": "u101",
+            "fullname": "Puki Ja"
+        }
     },
     {
         "_id": "abc3",
@@ -28,7 +40,11 @@
         "description": "enter worng key",
         "severity": 3,
         "createdAt": 15421073594,
-        "labels" : "['need-CR']"
+        "labels": "['need-CR']",
+        "creator": {
+            "_id": "u101",
+            "fullname": "Puki Ja"
+        }
     },
     {
         "_id": "abc4",
@@ -36,6 +52,10 @@
         "description": "url not found",
         "severity": 3,
         "createdAt": 1542107359,
-        "labels" : "['critical', 'need-CR',]"
+        "labels": "['critical', 'need-CR',]",
+        "creator": {
+            "_id": "u102",
+            "fullname": "Muki Ba"
+        }
     }
 ]
